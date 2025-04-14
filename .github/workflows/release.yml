@@ -43,7 +43,7 @@ jobs:
         uses: taiki-e/install-action@just
 
       - name: Install pre-requisites
-        run: just install
+        run: just install-hmt-packager
 
       - name: Build all crates
         run: just build release ${{ matrix.target }}

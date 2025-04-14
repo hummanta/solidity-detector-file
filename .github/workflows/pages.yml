@@ -22,12 +22,18 @@ jobs:
         uses: taiki-e/install-action@just
 
       - name: Install pre-requisites
-        run: just install
+        run: just install-hmt-manifest
 
       - name: Checkout or create gh-pages branch
         run: |
-          git fetch origin gh-pages 2>/dev/null
-          git switch gh-pages 2>/dev/null || git switch --orphan gh-pages
+          if git ls-remote --exit-code --heads origin gh-pages; then
+            echo "Found gh-pages branch, fetching and switching."
+            git fetch origin gh-pages
+            git switch gh-pages
+          else
+            echo "gh-pages branch does not exist, creating new orphan branch."
+            git switch --orphan gh-pages
+          fi
 
       - name: Determine tag name
         id: tag

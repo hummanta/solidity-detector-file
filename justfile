@@ -31,7 +31,13 @@ check:
 
 # Install pre-requisites
 install:
+    just install-hmt-packager
+    just install-hmt-manifest
+
+install-hmt-packager:
     cargo install hmt-packager --git https://github.com/hummanta/hummanta
+
+install-hmt-manifest:
     cargo install hmt-manifest --git https://github.com/hummanta/hummanta
 
 # Uninstall pre-requisites
