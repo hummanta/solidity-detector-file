@@ -24,17 +24,6 @@ jobs:
       - name: Install pre-requisites
         run: just install-hmt-manifest
 
-      - name: Checkout or create gh-pages branch
-        run: |
-          if git ls-remote --exit-code --heads origin gh-pages; then
-            echo "Found gh-pages branch, fetching and switching."
-            git fetch origin gh-pages
-            git switch gh-pages
-          else
-            echo "gh-pages branch does not exist, creating new orphan branch."
-            git switch --orphan gh-pages
-          fi
-
       - name: Determine tag name
         id: tag
         run: |
@@ -52,6 +41,17 @@ jobs:
 
       - name: Generate manifests
         run: just manifest ${{ steps.tag.outputs.TAG_NAME }}
+
+      - name: Checkout or create gh-pages branch
+        run: |
+          if git ls-remote --exit-code --heads origin gh-pages; then
+            echo "Found gh-pages branch, fetching and switching."
+            git fetch origin gh-pages
+            git switch gh-pages
+          else
+            echo "gh-pages branch does not exist, creating new orphan branch."
+            git switch --orphan gh-pages
+          fi
 
       - name: Configure Git user
         run: |
