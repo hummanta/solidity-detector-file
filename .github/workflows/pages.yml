@@ -21,6 +21,9 @@ jobs:
       - name: Install Just
         uses: taiki-e/install-action@just
 
+      - name: Install pre-requisites
+        run: just install
+
       - name: Checkout or create gh-pages branch
         run: |
           git fetch origin gh-pages 2>/dev/null
@@ -37,12 +40,12 @@ jobs:
       - name: Download checksums files
         uses: actions/download-artifact@v4
         with:
-          path: manifests/
+          path: target/artifacts
           pattern: "*-checksums"
           merge-multiple: true
 
       - name: Generate manifests
-        run: just manifest false ${{ steps.tag.outputs.TAG_NAME }}
+        run: just manifest ${{ steps.tag.outputs.TAG_NAME }}
 
       - name: Configure Git user
         run: |
