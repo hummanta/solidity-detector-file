@@ -38,6 +38,8 @@ jobs:
           path: target/artifacts
           pattern: "*-checksums"
           merge-multiple: true
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate manifests
         run: just manifest ${{ steps.tag.outputs.TAG_NAME }}
