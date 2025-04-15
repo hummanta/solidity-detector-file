@@ -1,0 +1,21 @@
+version = "v0.1.0"
+
+[artifacts.x86_64-apple-darwin]
+url = "https://github.com/hummanta/solidity-detector-file/releases/download/v0.1.0/solidity-detector-file-v0.1.0-x86_64-apple-darwin.tar.gz"
+hash = "a2b2b614f353a7a24ac025948b133797a66611bcc451adb0b7c46a77f9fa21f0"
+
+[artifacts.aarch64-apple-darwin]
+url = "https://github.com/hummanta/solidity-detector-file/releases/download/v0.1.0/solidity-detector-file-v0.1.0-aarch64-apple-darwin.tar.gz"
+hash = "90d3b3a3eeee85824bed169c0c8b2295459c2ee742981823b6674447b81c038a"
+
+[artifacts.x86_64-unknown-linux-gnu]
+url = "https://github.com/hummanta/solidity-detector-file/releases/download/v0.1.0/solidity-detector-file-v0.1.0-x86_64-unknown-linux-gnu.tar.gz"
+hash = "717b0e37d17ebeda8ab08d1095727581b49c9465dc3d187c482130a48ad345bf"
+
+[artifacts.x86_64-pc-windows-msvc]
+url = "https://github.com/hummanta/solidity-detector-file/releases/download/v0.1.0/solidity-detector-file-v0.1.0-x86_64-pc-windows-msvc.tar.gz"
+hash = "ecc49f942a697d8aed0fc3448769016a677e05b042615114e91b222d9d8be495"
+
+[artifacts.aarch64-unknown-linux-gnu]
+url = "https://github.com/hummanta/solidity-detector-file/releases/download/v0.1.0/solidity-detector-file-v0.1.0-aarch64-unknown-linux-gnu.tar.gz"
+hash = "31c8893a8a6235683c2be6f20b816c8876e4d419ec11ba24695eae40124ec197"

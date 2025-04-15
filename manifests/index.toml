@@ -1,0 +1,16 @@
+name = "solidity-detector-file"
+repository = "https://github.com/hummanta/solidity-detector-file"
+language = "solidity"
+kind = "detector"
+description = "Detects Solidity files by verifying if any file in the specified path has a .sol extension."
+targets = [
+    "x86_64-unknown-linux-gnu",
+    "aarch64-unknown-linux-gnu",
+    "x86_64-apple-darwin",
+    "aarch64-apple-darwin",
+    "x86_64-pc-windows-msvc",
+]
+latest = "v0.1.0"
+
+[releases]
+"v0.1.0" = "release-v0.1.0.toml"
