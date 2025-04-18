@@ -1,4 +1,5 @@
 name = "solidity-detector-file"
+homepage = "https://hummanta.github.io/solidity-detector-file"
 repository = "https://github.com/hummanta/solidity-detector-file"
 description = "Detects Solidity files by verifying if any file in the specified path has a .sol extension."
 language = "solidity"
