@@ -10,6 +10,7 @@ build profile="dev" target="":
 # Clean the build artifacts
 clean:
     cargo clean --verbose
+    rm -rf manifests
 
 # Linting
 clippy:
