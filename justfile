@@ -50,7 +50,7 @@ package profile="dev" target="" version="":
     hmt-packager --profile={{profile}} --target={{target}} --version={{version}}
 
 # Generate the manifests
-manifest version="":
+manifest version="local":
     hmt-manifest  \
       --package hmt-package.toml \
       --artifacts-dir target/artifacts \

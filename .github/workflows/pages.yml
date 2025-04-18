@@ -44,6 +44,16 @@ jobs:
           run-id: ${{ github.event.workflow_run.id }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Restore manifests directory from gh-pages (if exists)
+        run: |
+          if git ls-remote --exit-code --heads origin gh-pages; then
+            echo "gh-pages exists, restoring manifests"
+            git fetch origin gh-pages
+            git checkout origin/gh-pages -- manifests
+          else
+            echo "gh-pages does not exist yet. Skipping restore."
+          fi
+
       - name: Generate manifests
         run: just manifest ${{ steps.tag.outputs.TAG_NAME }}
 
