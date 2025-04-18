@@ -3,6 +3,36 @@
 A simple CLI tool to detect Solidity files by checking if a given path contains
 any `.sol` files.
 
+## Installation
+
+Prebuilt binaries Windows, Linux and macOS can be downloaded from the [Github
+release
+page](https://github.com/hummanta/solidity-detector-file/releases/latest). If
+there is no distro package available in your preferred manager, you need [Rust
+and cargo](https://www.rust-lang.org/tools/install) to build it.
+
+### Install from source:
+
+1. Clone the repository with `git clone
+   https://github.com/hummanta/solidity-detector-file.git`
+2. From the `solidity-detector-file` directory, run `cargo build --release` to
+   build the application in release mode.
+3. After a successful compilation, launch the executable with:
+   `target/release/solidity-detector-file`.
+
+### Install with cargo
+
+To get the latest bug fixes and features, you can install the development
+version from git. However, this is not fully tested. That means you're probably
+going to have more bugs despite having the latest bug fixes.
+
+```
+cargo install --git https://github.com/hummanta/solidity-detector-file
+```
+
+This will download the source from the main branch, build and install it in
+Cargo's global binary directory (`~/.cargo/bin/` by default).
+
 ## Usage
 
 ```text
