@@ -1,4 +1,5 @@
 name = "solidity-detector-file"
+homepage = "https://hummanta.github.io/solidity-detector-file"
 repository = "https://github.com/hummanta/solidity-detector-file"
 language = "solidity"
 kind = "detector"
