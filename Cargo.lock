@@ -106,8 +106,8 @@ checksum = "2304e00983f87ffb38b55b444b5e3b60a884b5d30c0fca7d82fe33449bbe55ea"
 
 [[package]]
 name = "hmt-detection"
-version = "0.11.14"
-source = "git+https://github.com/hummanta/hummanta.git?tag=v0.11.14#c312f6e9500165163f3941288a16bd61fbe6062b"
+version = "0.11.15"
+source = "git+https://github.com/hummanta/hummanta.git?tag=v0.11.15#3f959bce05293ff772c71e52bad463250cd3ddfc"
 dependencies = [
  "clap",
  "serde",
