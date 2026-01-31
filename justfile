@@ -5,7 +5,7 @@ default:
 # Build the project
 build profile="dev" target="":
     cargo build --workspace --all-features --all-targets \
-        --profile {{profile}} {{ if target != "" { "--target " + target } else { "" } }}
+        --profile {{ profile }} {{ if target != "" { "--target " + target } else { "" } }}
 
 # Clean the build artifacts
 clean:
@@ -14,7 +14,7 @@ clean:
 
 # Linting
 clippy:
-   cargo clippy --workspace --all-features --all-targets -- -D warnings
+    cargo clippy --workspace --all-features --all-targets -- -D warnings
 
 # Check formatting
 fmt:
@@ -36,10 +36,10 @@ install:
     just install-hmt-manifest
 
 install-hmt-packager:
-    cargo install hmt-packager --git https://github.com/hummanta/hummanta --tag v0.11.17
+    cargo install hmt-packager --git https://github.com/hummanta/hummanta --tag v0.11.20
 
 install-hmt-manifest:
-    cargo install hmt-manifest --git https://github.com/hummanta/hummanta --tag v0.11.17
+    cargo install hmt-manifest --git https://github.com/hummanta/hummanta --tag v0.11.20
 
 # Uninstall pre-requisites
 uninstall:
@@ -48,7 +48,7 @@ uninstall:
 
 # Package executables and generate checksums
 package profile="dev" target="" version="":
-    hmt-packager --profile={{profile}} --target={{target}} --version={{version}}
+    hmt-packager --profile={{ profile }} --target={{ target }} --version={{ version }}
 
 # Generate the manifests
 manifest version="local":
@@ -56,7 +56,7 @@ manifest version="local":
       --package hmt-package.toml \
       --artifacts-dir target/artifacts \
       --output-dir manifests \
-      --version={{version}}
+      --version={{ version }}
 
 # Run all commend in the local environment
 all:
